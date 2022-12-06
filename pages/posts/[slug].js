@@ -19,7 +19,7 @@ export default function Post({frontmatter, content}) {
 // Generating the paths for each post
 export async function getStaticPaths() {
   // Get list of all files from our posts directory
-  const files = fs.readdirSync("posts");
+  const files = fs.readdirSync("dupa");
   // Generate a path for each one
   const paths = files.map((fileName) => ({
     params: {
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 
 // Generate the static props for the page
 export async function getStaticProps({ params: { slug } }) {
-    const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
+    const fileName = fs.readFileSync(`dupa/${slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(fileName);
     return {
       props: {
