@@ -33,7 +33,7 @@ export async function getStaticProps(){
     // get frontmatter & slug from each post
     const posts = files.map((fileName) => {
         const slug = fileName.replace('.md', '');
-        const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+        const readFile = fs.readFileSync(`dupa/${fileName}`, 'utf-8');
         const { data: frontmatter } = matter(readFile);
 
         return {
