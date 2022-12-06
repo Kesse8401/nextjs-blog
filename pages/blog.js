@@ -28,7 +28,7 @@ export default function Blog({posts}){
 //Generating the Static Props for the Blog Page
 export async function getStaticProps(){
     // get list of files from the posts folder
-    const files = fs.readdirSync('posts');
+    const files = fs.readdirSync('dupa');
 
     // get frontmatter & slug from each post
     const posts = files.map((fileName) => {
